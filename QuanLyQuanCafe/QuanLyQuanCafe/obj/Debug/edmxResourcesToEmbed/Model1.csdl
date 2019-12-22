@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QlCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ReportHoaDon">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="NgayLap" />
+      <PropertyRef Name="TenBan" />
+      <PropertyRef Name="TinhTrang" />
+      <PropertyRef Name="TenMonAn" />
+      <PropertyRef Name="SoLuong" />
+      <PropertyRef Name="Gia" />
+      <PropertyRef Name="ThanhTien" />
+    </Key>
+    <Property Name="MaHD" Type="Int32" Nullable="false" />
+    <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TenBan" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TinhTrang" Type="Int32" Nullable="false" />
+    <Property Name="GiamGia" Type="Int32" />
+    <Property Name="TenMonAn" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SoLuong" Type="Byte" Nullable="false" />
+    <Property Name="Gia" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QlCafeEntities6" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ReportHoaDons" EntityType="Self.ReportHoaDon" />
+  </EntityContainer>
+</Schema>

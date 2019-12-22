@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QlCafeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QlCafe.dbo.ReportHoaDon' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ReportHoaDon">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="NgayLap" />
+      <PropertyRef Name="TenBan" />
+      <PropertyRef Name="TinhTrang" />
+      <PropertyRef Name="TenMonAn" />
+      <PropertyRef Name="SoLuong" />
+      <PropertyRef Name="Gia" />
+      <PropertyRef Name="ThanhTien" />
+    </Key>
+    <Property Name="MaHD" Type="int" Nullable="false" />
+    <Property Name="NgayLap" Type="smalldatetime" Nullable="false" />
+    <Property Name="TenBan" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="TinhTrang" Type="int" Nullable="false" />
+    <Property Name="GiamGia" Type="int" />
+    <Property Name="TenMonAn" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="SoLuong" Type="tinyint" Nullable="false" />
+    <Property Name="Gia" Type="smallmoney" Nullable="false" />
+    <Property Name="ThanhTien" Type="smallmoney" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QlCafeModelStoreContainer">
+    <EntitySet Name="ReportHoaDon" EntityType="Self.ReportHoaDon" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[ReportHoaDon].[MaHD] AS [MaHD], 
+[ReportHoaDon].[NgayLap] AS [NgayLap], 
+[ReportHoaDon].[TenBan] AS [TenBan], 
+[ReportHoaDon].[TinhTrang] AS [TinhTrang], 
+[ReportHoaDon].[GiamGia] AS [GiamGia], 
+[ReportHoaDon].[TenMonAn] AS [TenMonAn], 
+[ReportHoaDon].[SoLuong] AS [SoLuong], 
+[ReportHoaDon].[Gia] AS [Gia], 
+[ReportHoaDon].[ThanhTien] AS [ThanhTien]
+FROM [dbo].[ReportHoaDon] AS [ReportHoaDon]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
